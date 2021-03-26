@@ -60,7 +60,7 @@ function App() {
           </div>
         </form>
 
-        <div>
+        <div className="list">
           {list.length > 0 ? (
             list.map((el, i) => (
               <div key={i} className="item">
