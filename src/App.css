@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  min-width: 600px;
+  width: 100%;
   background-color: gray;
 }
 

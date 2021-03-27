@@ -12,8 +12,7 @@ code {
     monospace;
 }
 
-/* src/index.css */
-#extension-root {
+#ext-root {
   width: 600px;
   height: 100%;
   position: fixed;
@@ -22,4 +21,10 @@ code {
   z-index: 2147483647;
   background-color: white;
   box-shadow: 0px 0px 5px #0000009e;
+}
+
+#ext-root iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
