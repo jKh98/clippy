@@ -9,14 +9,9 @@
   "content_security_policy": "script-src 'self' 'sha256-NAAKFqXxfjI1LgmKrrc3nxKe0WeY4/Lkue3yXruT4OE=' 'sha256-UtdLJkZdXQ6adZtYaJY8FbnmuNwWtFQ7lkWJX2iMz8E='; object-src 'self'",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["<all_urls>"],
       "css": ["/static/css/main.css", "/static/css/content.css"],
-      "js": [
-        "/static/js/2.chunk.js",
-        "/static/js/content.js",
-        "/static/js/main.js"
-      ],
-      "run_at": "document_end"
+      "js": ["/static/js/2.chunk.js", "/static/js/content.js"]
     }
   ],
   "web_accessible_resources": ["/static/css/content.css"]

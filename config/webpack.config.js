@@ -162,20 +162,14 @@ module.exports = function (webpackEnv) {
     bail: isEnvProduction,
     devtool: isEnvProduction
       ? shouldUseSourceMap
-        ? "inline-source-map"
+        ? "source-map"
         : false
       : isEnvDevelopment && "cheap-module-source-map",
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
     entry: {
-      main:
-        isEnvDevelopment && !shouldUseReactRefresh
-          ? [webpackDevClientEntry, paths.appIndexJs]
-          : paths.appIndexJs,
-      content:
-        isEnvDevelopment && !shouldUseReactRefresh
-          ? [webpackDevClientEntry, paths.appContentJs]
-          : paths.appContentJs,
+      main: [paths.appIndexJs],
+      content: ["./src/content.js"],
     },
     output: {
       // The build folder.
