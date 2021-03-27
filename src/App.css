@@ -1,5 +1,6 @@
 .container {
   min-height: 100vh;
+  min-width: 600px;
   background-color: gray;
 }
 
@@ -83,4 +84,5 @@
 
 .list {
   padding: 20px;
+  overflow-y: auto;
 }

@@ -2,8 +2,23 @@
   "name": "clippy",
   "version": "1.0",
   "manifest_version": 2,
+  "background": {
+    "scripts": ["app/background.js"]
+  },
   "browser_action": {
     "default_popup": "index.html"
   },
-  "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'sha256-NAAKFqXxfjI1LgmKrrc3nxKe0WeY4/Lkue3yXruT4OE=' 'sha256-UtdLJkZdXQ6adZtYaJY8FbnmuNwWtFQ7lkWJX2iMz8E='; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["/static/css/main.css", "/static/css/content.css"],
+      "js": [
+        "/static/js/2.chunk.js",
+        "/static/js/content.js",
+        "/static/js/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
 }
